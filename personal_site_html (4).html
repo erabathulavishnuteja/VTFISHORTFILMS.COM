@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Personal Page</title>
+  <!-- Font Awesome CDN for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    html { scroll-behavior: smooth; }
+    body { margin: 0; font-family: Arial, sans-serif; background: #f5f7fa; color: #333; }
+    header { background: #0a3d62; color: white; padding: 50px 20px; text-align: center; }
+    header h1 { font-size: 2.5rem; margin-bottom: 10px; animation: fadeInDown 1s ease-in-out; }
+    header p { font-size: 1.2rem; opacity: 0.9; animation: fadeInUp 1s ease-in-out; }
+    nav a { margin: 0 10px; transition: color 0.3s, transform 0.3s; }
+    nav a:hover { color: #f39c12; transform: scale(1.1); }
+    .section { max-width: 1000px; margin: 40px auto; padding: 20px; background: white; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); opacity: 0; transform: translateY(20px); animation: fadeInUpSection 1s forwards; animation-delay: 0.3s; }
+    .section:nth-of-type(2) { animation-delay: 0.5s; }
+    .section:nth-of-type(3) { animation-delay: 0.7s; }
+    .section:nth-of-type(4) { animation-delay: 0.9s; }
+    .section:nth-of-type(5) { animation-delay: 1.1s; }
+    .section h2 { font-size: 1.8rem; margin-bottom: 20px; color: #0a3d62; }
+    .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; }
+    .gallery img { width: 100%; height: 180px; object-fit: cover; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); transition: transform 0.3s, box-shadow 0.3s, filter 0.3s; }
+    .gallery img:hover { transform: scale(1.05) rotate(-2deg); box-shadow: 0 6px 20px rgba(0,0,0,0.25); filter: brightness(1.1); }
+    ul { list-style: none; padding: 0; }
+    a { color: #0a3d62; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .social-links i { margin-right: 8px; color: #0a3d62; transition: transform 0.3s, color 0.3s; }
+    .social-links a:hover i { color: #f39c12; transform: scale(1.2); }
+    form input, form textarea, form button { width: 100%; padding: 10px; margin: 10px 0; border-radius: 5px; border: 1px solid #ccc; box-sizing: border-box; }
+    form button { background-color: #0a3d62; color: white; border: none; cursor: pointer; transition: background 0.3s; }
+    form button:hover { background-color: #f39c12; }
+    @keyframes fadeInDown { from { opacity: 0; transform: translateY(-20px); } to { opacity: 1; transform: translateY(0); } }
+    @keyframes fadeInUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+    @keyframes fadeInUpSection { to { opacity: 1; transform: translateY(0); } }
+    @media (max-width: 600px) { header h1 { font-size: 2rem; } header p { font-size: 1rem; } .section { margin: 20px; padding: 15px; } }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>EERABATHULA VISHNUTEJA</h1>
+    <p>Welcome to my professional personal page</p>
+    <nav>
+      <a href="#about">About</a> | 
+      <a href="#gallery">Gallery</a> | 
+      <a href="#resume">Resume</a> | 
+      <a href="#contact">Contact</a> | 
+      <a href="#social-links">Social</a>
+    </nav>
+  </header>
+
+  <section class="section" id="about">
+    <h2>About Me</h2>
+    <p>Hello! I'm EERABATHULA VISHNUTEJA, an aspiring filmmaker specializing in short films. I am passionate about storytelling, directing, and creating visually engaging cinematic experiences. This website showcases my work and provides ways to connect with me.</p>
+  </section>
+
+  <section id="gallery">
+  <h2>Gallery</h2>
+  <div class="gallery-grid">
+    <img src="/mnt/data/One-Person-Short-Film-Ideas.webp" alt="One Person Short Film Ideas">
+    <img src="/mnt/data/short-film.jpg" alt="Short Film Reel">
+    <img src="/mnt/data/vtf-logo-vtf-letter-vtf-letter-logo-design-initials-vtf-logo-linked-with-circle-uppercase-monogram-logo-vtf-typography-technology-business-real-estate-brand_229120-77290.avif" alt="VTF Logo">
+  </div>
+</section>
+
+  <section class="section" id="resume">
+    <h2>Submit Your Resume</h2>
+    <form action="https://formsubmit.co/VTFISHORTFILMS@GMAIL.COM" method="POST">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_next" value="https://yourwebsite.com/thankyou.html">
+
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <input type="text" name="profession" placeholder="Your Profession" required>
+      <input type="number" name="age" placeholder="Your Age" required>
+      <textarea name="ideas" placeholder="Your Ideas" rows="5"></textarea>
+
+      <button type="submit">Submit Resume</button>
+    </form>
+  </section>
+
+  <section class="section" id="contact">
+    <h2>Contact</h2>
+    <p>Email: VTFISHOTFILMS@GMAIL.COM</p>
+    <p>Phone: +91 9912736396</p>
+    <p>Address: Optional – your city or studio location</p>
+  </section>
+
+  <section class="section" id="social-links">
+    <h2>Social Links</h2>
+    <ul class="social-links">
+      <li><a href="#"><i class="fab fa-linkedin"></i>LinkedIn</a></li>
+      <li><a href="#"><i class="fab fa-github"></i>GitHub</a></li>
+      <li><a href="#"><i class="fab fa-twitter"></i>Twitter</a></li>
+    </ul>
+  </section>
+</body>
+</html>
